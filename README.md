@@ -1,0 +1,1 @@
+# Raiting_Component
