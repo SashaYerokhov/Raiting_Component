@@ -1,0 +1,57 @@
+:root {
+  --orange-500: hsl(25, 97%, 53%);
+  --white: hsl(0, 100%, 100%);
+  --grey-500: hsl(217, 12%, 63%);
+  --grey-900: hsl(213, 19%, 18%);
+  --grey-950: hsl(216, 12%, 8%);
+}
+
+.overpass-regular {
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.overpass-bold {
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 800px;
+    font-family: "Overpass", sans-serif;
+    font-weight: 400;
+    font-size: 0.9375rem;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+button {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+    background-color: transparent;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  font-style: italic;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
