@@ -63,6 +63,9 @@ article {
   padding: 32px;
   /* display: none; */
 }
+.front__component.active {
+  display: none;
+}
 .front__component img {
   position: relative;
   z-index: 3;
@@ -120,7 +123,7 @@ p {
   background-color: var(--orange-500);
   color: var(--white);
 }
-.btn__circle.active {
+.btn__circle.grey {
   background-color: var(--grey-500);
   color: var(--white);
 }
@@ -145,7 +148,7 @@ p {
   background-color: var(--white);
   color: var(--orange-500);
 }
-.back__component {
+.back__component.active {
   display: none;
   background: radial-gradient(
     98.96% 98.96% at 50% 0%,
@@ -153,6 +156,9 @@ p {
     #181e27 100%
   );
   padding: 45px 32px;
+}
+.back__component {
+  display: block;
 }
 .back__component img {
   display: block;
@@ -210,6 +216,7 @@ p {
   }
   .buttons__line {
     margin-block-end: 24px;
+    column-gap: 14px;
   }
   .btn__circle {
     width: 2.625rem;
