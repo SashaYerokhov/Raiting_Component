@@ -19,39 +19,222 @@
   font-style: normal;
 }
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
-    min-height: 800px;
-    font-family: "Overpass", sans-serif;
-    font-weight: 400;
-    font-size: 0.9375rem;
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 50rem;
+  font-family: "Overpass", sans-serif;
+  background-color: var(--grey-950);
+  font-weight: 400;
+  font-size: 0.9375rem;
 }
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 button {
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    color: inherit;
-    background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+}
+article {
+  width: 25.75rem;
+  height: 26rem;
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  border-radius: 30px;
+  margin: 195px auto 189px;
+}
+.front__component {
+  position: relative;
+  padding: 32px;
+  /* display: none; */
+}
+.front__component img {
+  position: relative;
+  z-index: 3;
+  margin-block-end: 46px;
+}
+.front__component::before {
+  position: absolute;
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--grey-900);
+  top: 17px;
+  left: 16px;
+  z-index: 1;
+}
+h2 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--white);
+  margin-block: 0 15px;
+}
+p {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 160%;
+  color: var(--grey-500);
+  margin-block: 0 24px;
+}
+.buttons__line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 22px;
+  margin-block-end: 32px;
+}
+.btn__circle {
+  background-color: var(--grey-900);
+  border: 1px solid var(--grey-900);
+  border-radius: 50%;
+  color: var(--grey-500);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  text-align: center;
+  width: 3.1875rem;
+  height: 3.1875rem;
+  cursor: pointer;
+  transition:
+    background-color 350ms ease-in-out,
+    color 350ms ease-in;
+}
+.btn__circle:hover {
+  background-color: var(--orange-500);
+  color: var(--white);
+}
+.btn__circle.active {
+  background-color: var(--grey-500);
+  color: var(--white);
+}
+.btn__submit {
+  width: 21.3125rem;
+  height: 2.8125rem;
+  border-radius: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  background-color: var(--orange-500);
+  color: var(--white);
+  transition:
+    background-color 350ms ease-in-out,
+    color 350ms ease-in;
+}
+.btn__submit:hover {
+  background-color: var(--white);
+  color: var(--orange-500);
+}
+.back__component {
+  display: none;
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  padding: 45px 32px;
+}
+.back__component img {
+  display: block;
+  margin: 0 auto 32px;
+}
+.back__component-rating {
+  background: var(--grey-900);
+  width: 12.0625rem;
+  border-radius: 23px;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 160%;
+  text-align: center;
+  margin: 0 auto 32px;
+  padding-block: 4px;
+  padding-inline: 10px;
+  color: var(--orange-500);
+}
+.back__component h2,
+.back__component p {
+  text-align: center;
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-align: center;
   font-style: italic;
+  color: var(--white);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 500px) {
+  article {
+    width: 20.4375rem;
+    height: 22.5rem;
+    margin: 154px auto;
+  }
+  .front__component {
+    padding: 24px;
+  }
+  .front__component img {
+    margin-block-end: 30px;
+  }
+  .front__component::before {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 13px;
+    left: 13px;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-block-end: 17px;
+  }
+  .buttons__line {
+    margin-block-end: 24px;
+  }
+  .btn__circle {
+    width: 2.625rem;
+    height: 2.625rem;
+    font-size: 0.875rem;
+    line-height: 171%;
+  }
+  .btn__submit {
+    width: 17.4375rem;
+    height: 2.8125rem;
+    font-size: 0.875rem;
+  }
+  .back__component {
+    padding: 34px 24px;
+  }
+  .back__component img {
+    margin-block-end: 24px;
+  }
+  .back__component-rating {
+    width: 10.625rem;
+    font-size: 0.875rem;
+    line-height: 157%;
+    margin-block-end: 24px;
+  }
+  p {
+    font-size: 0.875rem;
+  }
 }
